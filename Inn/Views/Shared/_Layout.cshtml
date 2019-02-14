@@ -10,7 +10,7 @@
 
 </head>
 <body>
-    <div class="navbar navbar- navbar-fixed-top">
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -25,7 +25,7 @@
                     <li>@Html.ActionLink("Головна", "Index", "Home")</li>
                     <li>@Html.ActionLink("Про нас", "About", "Home")</li>
                     <li>@Html.ActionLink("Послуги", "Services", "Home")</li>
-                    <li>@Html.ActionLink("Портфоліо", "Structure", "Home")</li>
+                    <li>@Html.ActionLink("Портфоліо", "About", "Home")</li>
                     <li>@Html.ActionLink("Контакти", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -36,12 +36,16 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
+            <p class="col-md-3">&copy; @DateTime.Now.Year – Innova-D</p>
+            <div class="col-md-9 alert-info">
+                asd
+            </div>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>
